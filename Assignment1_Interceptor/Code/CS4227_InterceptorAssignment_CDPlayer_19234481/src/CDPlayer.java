@@ -41,26 +41,24 @@ public class CDPlayer implements CDPlayerButtons {
         playing = false;
     }
 
-    public String getCDName() {
+    public void getCDName() {
         if (cdInserted != true) {
-            return "Error: Insert CD!";
+            System.out.println("Error: Insert CD!");
         } else {
-            return cdName;
-        }
-
-    }
-
-    public String getCDLength() {
-        if (cdInserted != true) {
-            return "Error: Insert CD!";
-        } else {
-
-            return cdLength;
+            System.out.println(cdName);
         }
     }
-}
 
-    class main {
+    public void getCDLength() {
+        if (cdInserted != true) {
+            System.out.println("Error: Insert CD!");
+        } else {
+            System.out.println(cdLength);
+        }
+    }
+
+
+
         public static void main(String[] args) {
             CDPlayer currentCDPlayer = new CDPlayer();  // Creating a CDPlayer Object
             currentCDPlayer.getCDName();
